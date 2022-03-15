@@ -1,0 +1,150 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{ctex}
+\usepackage{amsmath,amscd,amsbsy,amssymb,latexsym,url,bm,amsthm}
+\usepackage{epsfig,graphicx,subfigure}
+\usepackage{enumitem,balance}
+\usepackage{wrapfig}
+\usepackage{mathrsfs,euscript}
+\usepackage[x11names,svgnames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[vlined,ruled,commentsnumbered,linesnumbered]{algorithm2e}
+\usepackage{listings}
+\usepackage{multicol}
+%\usepackage{fontspec}
+
+\renewcommand{\listalgorithmcfname}{List of Algorithms}
+\renewcommand{\algorithmcfname}{Alg.}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exercise}{Exercise}
+\newtheorem*{solution}{Solution}
+\newtheorem{definition}{Definition}
+\theoremstyle{definition}
+
+
+%\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\newcommand{\postscript}[2]
+ {\setlength{\epsfxsize}{#2\hsize}
+  \centerline{\epsfbox{#1}}}
+
+\renewcommand{\baselinestretch}{1.0}
+
+\setlength{\oddsidemargin}{-0.365in}
+\setlength{\evensidemargin}{-0.365in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{7in}
+\makeatletter \renewenvironment{proof}[1][Proof] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+\makeatletter
+\renewenvironment{solution}[1][Solution] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+
+
+\definecolor{codegreen}{rgb}{0.44,0.68,0.28}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.96,0.96,0.96}
+
+\lstset{
+language=C++,
+frame=shadowbox,
+keywordstyle = \color{blue}\bfseries,
+commentstyle=\color{codegreen},
+tabsize = 4,
+backgroundcolor=\color{backcolour},
+numbers=left,
+numbersep=5pt,
+breaklines=true,
+emph = {int,float,double,char},emphstyle=\color{orange},
+emph ={[2]const, typedef},emphstyle = {[2]\color{red}} }
+
+
+
+\begin{document}
+\noindent
+
+%========================================================================
+\noindent\framebox[\linewidth]{\shortstack[c]{
+\Large{\textbf{Lab06-Heaps and BST}}\vspace{1mm}\\
+VE281 - Data Structures and Algorithms, Xiaofeng Gao, TA: Li Ma, Autumn 2019}}
+%CS26019 - Algorithm Design and Analysis, Xiaofeng Gao, Autumn 2019}}
+\begin{center}
+\footnotesize{\color{red}$*$ Please upload your assignment to website. Contact webmaster for any questions.}
+
+\footnotesize{\color{blue}$*$ Name:\_\_\_\_\_\_\_\_\_  \quad Student ID:\_\_\_\_\_\_\_\_\_ \quad Email: \_\_\_\_\_\_\_\_\_\_\_\_}
+\end{center}
+
+
+\begin{enumerate}
+
+\item \textbf{D-ary Heap.} D-ary heap is similar to binary heap，but (with one possible exception) each non-leaf node of d-ary heap has $d$ children, not just $2$ children.
+
+\begin{enumerate}
+\item How to represent a d-ary heap in an array?
+\item What is the height of the d-ary heap with $n$ elements? Please use $n$ and $d$ to show.
+\item Please give the implementation of insertion on the min heap of d-ary heap, and show the time complexity with $n$ and $d$.
+\end{enumerate}
+
+\begin{lstlisting}[language=C++]
+// Input: an integer k
+// Output: null
+void enqueue(int k)
+{
+	// TODO;
+}
+\end{lstlisting}
+
+%\begin{solution}
+%	Uncomment this block to write your solution.
+%\end{solution}
+
+\item \textbf{Median Maintenance.} Input a sequence of numbers $x_1,x_2...,x_n$, one-by-one. At each time step $i$, output the median of $x_1,x_2...,x_i$. How to do this with $O(\log i)$ time at each step $i$? Show the implementation.
+
+\item  \textbf{BST}. Two elements of a binary search tree are swapped by mistake. Recover the tree without changing its structure. Implement with a constant space.
+
+\begin{lstlisting}[language=C++]
+/**
+ * Definition for binary tree
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+void recoverTree(TreeNode *root)
+{
+	// TODO;
+}
+\end{lstlisting}
+
+%\begin{solution}
+%	Uncomment this block to write your solution.
+%\end{solution}
+
+\item  \textbf{BST}. Input an integer array, then determine whether the array is the result of the post-order traversal of a binary search tree. If yes, return Yes; otherwise, return No. Suppose that any two numbers of the input array are different from each other. Show the implementation.
+
+\begin{lstlisting}[language=C++]
+// Input: an integer array
+// Output: yes or no
+bool verifySquenceOfBST(vector<int> sequence)
+{
+	// TODO;
+}
+\end{lstlisting}
+
+%\begin{solution}
+%	Uncomment this block to write your solution.
+%\end{solution}
+
+\end{enumerate}
+
+%========================================================================
+\end{document}
