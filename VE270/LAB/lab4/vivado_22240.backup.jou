@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Jun 16 22:38:40 2019
+# Process ID: 22240
+# Current directory: C:/Users/69009/Desktop/2/VE270/LAB/4/LAB4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18140 C:\Users\69009\Desktop\2\VE270\LAB\4\LAB4\LAB4.xpr
+# Log file: C:/Users/69009/Desktop/2/VE270/LAB/4/LAB4/vivado.log
+# Journal file: C:/Users/69009/Desktop/2/VE270/LAB/4/LAB4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/69009/Desktop/2/VE270/LAB/4/LAB4/LAB4.xpr
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1
+place_ports {Q1[6]} W7
+place_ports {Q1[5]} W6
+place_ports {Q1[4]} U8
+place_ports {Q1[3]} V8
+place_ports {Q1[2]} U5
+place_ports {Q1[1]} V5
+place_ports {Q1[0]} U7
+place_ports {Q[3]} V19
+place_ports {Q[2]} U19
+place_ports {Q[1]} E19
+place_ports {Q[0]} U16
+file mkdir C:/Users/69009/Desktop/2/VE270/LAB/4/LAB4/LAB4.srcs/constrs_1/new
+close [ open C:/Users/69009/Desktop/2/VE270/LAB/4/LAB4/LAB4.srcs/constrs_1/new/1.xdc w ]
+add_files -fileset constrs_1 C:/Users/69009/Desktop/2/VE270/LAB/4/LAB4/LAB4.srcs/constrs_1/new/1.xdc
+set_property target_constrs_file C:/Users/69009/Desktop/2/VE270/LAB/4/LAB4/LAB4.srcs/constrs_1/new/1.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+reset_run impl_1
