@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers -->
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>ImageDatastore</title>
+<link rel="stylesheet" href="./the peppers image_files/docstyle.css" type="text/css">
+<meta name="chunktype" content="refpage">
+<meta name="refentity" itemprop="refentity" content="object:ImageDatastore"><link href="./the peppers image_files/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="toctype" itemprop="pagetype" content="fcn">
+<meta name="infotype" itemprop="infotype" content="ref/other">
+
+<meta name="description" itemprop="description" content="An ImageDatastore object manages a collection of image files, where each individual image fits in memory, but the entire collection of images does not necessarily fit.">
+<script type="text/javascript" src="./the peppers image_files/jquery-latest.js"></script>
+<link href="./the peppers image_files/site6.css" rel="stylesheet" type="text/css">
+<link href="file:///D:/SJTU/Computer/matlab/help/includes/product/css/site6_lg.css?201702162215" rel="stylesheet" media="screen and (min-width: 1200px)">
+<link href="file:///D:/SJTU/Computer/matlab/help/includes/product/css/site6_md.css?201702162215" rel="stylesheet" media="screen and (min-width: 992px) and (max-width: 1199px)">
+<link href="file:///D:/SJTU/Computer/matlab/help/includes/product/css/site6_sm+xs.css?201702162215" rel="stylesheet" media="screen and (max-width: 991px)">
+<link href="file:///D:/SJTU/Computer/matlab/help/includes/product/css/site6_sm.css?201702162215" rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 991px)">
+<link href="file:///D:/SJTU/Computer/matlab/help/includes/product/css/site6_xs.css?201702162215" rel="stylesheet" media="screen and (max-width: 767px)">
+<link href="./the peppers image_files/site6_offcanvas.css" rel="stylesheet" type="text/css">
+
+<script src="./the peppers image_files/l10n.js"></script>
+<script src="./the peppers image_files/docscripts.js"></script>
+<script src="./the peppers image_files/f1help.js"></script>
+<script src="./the peppers image_files/docscripts(1).js"></script>
+<script src="./the peppers image_files/mw.imageanimation.js"></script>
+<script src="./the peppers image_files/jquery.highlight.js"></script>
+<script src="./the peppers image_files/underscore-min.js"></script>
+<script src="./the peppers image_files/examples.js"></script>
+<script src="./the peppers image_files/use_platform_screenshots.js"></script>
+<script src="./the peppers image_files/suggest.js"></script>
+<script src="./the peppers image_files/overload.js"></script>
+
+
+
+
+
+<script src="./the peppers image_files/jquery.mobile.custom.min.js"></script>
+<script src="./the peppers image_files/bootstrap.min.js" type="text/javascript"></script>
+<script src="./the peppers image_files/global.js"></script>
+<link href="./the peppers image_files/doc_center.css" rel="stylesheet" type="text/css">
+<link href="./the peppers image_files/doc_center_installed.css" rel="stylesheet" type="text/css">
+<link href="./the peppers image_files/doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+<script type="text/javascript" src="./the peppers image_files/MathRenderer.js"></script><style type="text/css">math { visibility: hidden; }</style><link type="text/css" rel="stylesheet" href="./the peppers image_files/main.css"><script type="text/javascript" src="./the peppers image_files/dojo.js"></script>
+</head>
+<body id="responsive_offcanvas" class="no_animate" style="">
+<div id="doc_header_spacer" class="header"></div>
+<div class="sticky_header_container includes_subnav affix">
+<div class="section_header level_3">
+<div class="container-fluid">
+<div class="row" id="mobile_search_row">
+<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7" id="mobile_search">
+<div class="search_nested_content_container">
+<form id="docsearch_form" name="docsearch_form" method="get" data-release="R2017a" data-language="en" action="file:///D:/SJTU/Computer/matlab/help/templates/searchresults.html">
+<div class="input-group tokenized_search_field">
+<label class="sr-only">Search Help</label>
+<input type="text" class="form-control conjoined_search" autocomplete="off" name="qdoc" placeholder="Search Help" id="docsearch">
+<div class="input-group-btn">
+<button type="submit" name="submitsearch" id="submitsearch" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1" disabled=""></button>
+</div>
+</div>
+</form>
+</div>
+<button class="btn icon-remove btn_search pull-right icon_32 visible-xs" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button></div>
+<div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5" id="section_header_title">
+<div class="section_header_content">
+<div class="section_header_title">
+<h1><a href="file:///D:/SJTU/Computer/matlab/help/documentation-center.html">Documentation</a></h1>
+</div>
+</div>
+</div>
+<div class="visible-xs" id="search_actuator">
+<button class="btn icon-search btn_search pull-right icon_16" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+</div>
+</div><!--END.CLASS row-->
+</div><!--END.CLASS container-fluid-->
+</div><!--END.CLASS section_header level_3-->
+<div class="horizontal_nav">
+<div class="horizontal_nav_container">
+<div class="offcanvas_actuator active" data-toggle="offcanvas" data-target="#sidebar" id="nav_toggle">
+<button type="button" class="btn"><span class="sr-only">Toggle navigation</span><span class="icon-menu icon_24"></span></button>
+<span class="offcanvas_actuator_label"></span><span class="offcanvas_actuator_close"></span>
+</div>
+<div class="offcanvas_horizontal_nav">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 hidden-xs hidden-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><!--END.CLASS sticky_header_container-->
+<div class="row-offcanvas row-offcanvas-left active">
+<div class="sidebar-offcanvas" id="sidebar" role="navigation">
+<nav class="offcanvas_nav" role="navigation">
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_breadcrumb">
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="file:///D:/SJTU/Computer/matlab/help/documentation-center.html" itemprop="url"><span itemprop="title">Documentation Home</span></a></li>
+</ul>
+
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_disambiguation">
+<li class="product"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/index.html">MATLAB</a>
+<div class="dropdown">
+<span class="icon-arrow-down icon_16" id="dropdownMenu1" data-toggle="dropdown"></span>
+<ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="file:///D:/SJTU/Computer/matlab/help/matlab/examples.html?s_cid=doc_flyout">Examples</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="file:///D:/SJTU/Computer/matlab/help/matlab/functionlist.html?s_cid=doc_flyout">Functions</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="file:///D:/SJTU/Computer/matlab/help/matlab/release-notes.html?s_cid=doc_flyout">Release Notes</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.mathworks.com/help/releases/R2017a/pdf_doc/matlab/index.html?s_cid=doc_flyout">PDF Documentation</a></li>
+</ul>
+</div>
+</li>
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/data-import-and-analysis.html" itemprop="url"><span itemprop="title">Data Import and Analysis</span></a></li>
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/large-files-and-big-data.html" itemprop="url"><span itemprop="title">Large Files and Big Data</span></a></li>
+<li itemscope="" itemtype="http://www.data-vocabulary.org/Breadcrumb" itemprop="breadcrumb"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/datastore.html" itemprop="url"><span itemprop="title">Datastore</span></a></li>
+</ul>
+<ul xmlns:atict="http://www.arbortext.com/namespace/atict" class="nav_scrollspy nav">
+<li class="nav_scrollspy_function"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#responsive_offcanvas">ImageDatastore</a></li>
+<li class="nav_scrollspy_title" id="SSPY810-refentry">On this page</li>
+<li class=""><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#butueui-5" class="intrnllnk">Create Object</a></li>
+<li class=""><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#butueui-3" class="intrnllnk">Properties</a><ul class="nav">
+<li class=""><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#property_d0e176926" class="intrnllnk">Files</a></li>
+<li class=""><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#property_d0e176972" class="intrnllnk">ReadSize</a></li>
+<li class=""><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#property_d0e177005" class="intrnllnk">Labels</a></li>
+<li class=""><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#property_d0e177059" class="intrnllnk">ReadFcn</a></li>
+</ul>
+</li><li class=""><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#butueui-4" class="intrnllnk">Object Functions</a></li>
+<li class="active"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#examples" class="intrnllnk">Examples</a><ul class="nav">
+<li class="active"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#buyi31e-1" class="intrnllnk">Specify Images to Read</a></li>
+</ul>
+</li><li><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore-object.html?searchHighlight=peppers#butueui-1_seealso" class="intrnllnk">See Also</a></li>
+</ul>
+</nav>
+<script src="./the peppers image_files/offcanvas.js"></script></div><!--END.CLASS sidebar-offcanvas-->
+<div class="content_container" id="content_container">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+
+<section id="doc_center_content" lang="en"><div id="pgtype-ref"><div class="object_ref"><span id="butueui-1" class="anchor_target"></span><div class="clearfix"></div><div itemprop="content"><h1 class="r2017a" itemprop="title">ImageDatastore</h1><!-- SYNCHTO: _funcalpha.html --><div class="doc_topic_desc"><div class="purpose_container"><p itemprop="purpose">Datastore for image data</p><div class="switch"><a href="javascript:void(0);" id="expandAllPage">expand all in page</a></div></div></div></div><div class="refsummary" itemprop="content"><h2>Description</h2>
+<div class="shortsummary"><p>An <code>ImageDatastore</code> object manages
+a collection of image files, where each individual image fits in memory,
+but the entire collection of images does not necessarily fit. To create
+an <code>ImageDatastore</code> object, use either the <a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore.html"><code>imageDatastore</code></a> function or the <a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.html"><code>datastore</code></a> function. Once the object is
+created, you can specify <code>ImageDatastore</code> properties
+using dot notation and use functions that access and manage the data.</p></div>
+<p>For example, you can create an <code>ImageDatastore</code> object
+and specify the <code>'ReadFcn'</code> parameter:</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>imds = imageDatastore(<span style="color:#A020F0">'<span class="highlight_01">peppers</span>.png'</span>,<span style="color:#A020F0">'ReadFcn'</span>,@customreader);</pre></div></div></div>Alternatively,
+you can assign <code>'ReadFcn'</code> to <code>@customreader</code> after
+you create the <code>ImageDatastore</code>: <div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>imds = imageDatastore(<span style="color:#A020F0">'<span class="highlight_01">peppers</span>.png'</span>);
+imds.ReadFcn = @customreader;</pre></div></div></div><p></p>
+</div><div class="clearfix"></div><div itemprop="content" class="ref_sect"><span id="butueui-5" class="anchor_target"></span><h2 id="butueui-5">Create Object</h2><p>Create <code>ImageDatastore</code> objects using the <a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore.html"><code>imageDatastore</code></a> function or the <a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.html"><code>datastore</code></a> function.</p></div><div class="clearfix"></div><div itemprop="content" class="ref_sect"><h2 id="butueui-3">Properties</h2><div class="expandableContent"><p class="switch "><a href="javascript:void(0);" class="expandAllLink" data-allexpanded="false">expand all</a></p><div class="panel-group" id="butueui-3_panel-group" role="tablist" aria-multiselectable="true"><div class="panel panel-default " itemscope="" itemprop="property" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/PropertyReference"><div role="tab" data-toggle="collapse" id="expand_panel_heading_property_d0e176926" data-target="#expand_panel_body_property_d0e176926" aria-controls="expand_panel_body_property_d0e176926" class="panel-heading add_cursor_pointer collapsed" aria-expanded="false"><span id="prop_Files" class="anchor_target"></span><h3 class="panel-title" id="property_d0e176926"><span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/ReferenceEntity" itemprop="refentityobj"><meta itemprop="refentity" content="property:ImageDatastore.Files"><code itemprop="name" id="propname_Files">Files</code></span> — <span itemprop="purpose">Files included in datastore</span><br><span class="add_font_color_general remove_bold"><span class="example_desc">character vector | cell array of character vectors</span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_property_d0e176926" aria-labelledby="expand_panel_heading_property_d0e176926" class="panel-collapse collapse"><div class="panel-body">
+<p>Files included in the datastore, resolved as a character vector
+or cell array of character vectors. Each character vector is a full
+path to a file. The <code>location</code> argument in the <code>imageDatastore</code> and <code>datastore</code> functions
+defines <code>Files</code> when the datastore is created.</p>
+<p class="description_valueexample"><strong>Example: </strong><code>{'C:\dir\data\file1.jpg';'C:\dir\data\file2.jpg'}</code></p>
+<p class="datatypelist"><strong>Data Types: </strong><code>char</code> | <code>cell</code></p></div></div></div><div class="panel panel-default " itemscope="" itemprop="property" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/PropertyReference"><div role="tab" data-toggle="collapse" id="expand_panel_heading_property_d0e176972" data-target="#expand_panel_body_property_d0e176972" aria-controls="expand_panel_body_property_d0e176972" class="panel-heading add_cursor_pointer collapsed" aria-expanded="false"><span id="prop_ReadSize" class="anchor_target"></span><h3 class="panel-title" id="property_d0e176972"><span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/ReferenceEntity" itemprop="refentityobj"><meta itemprop="refentity" content="property:ImageDatastore.ReadSize"><code itemprop="name" id="propname_ReadSize">ReadSize</code></span> — <span itemprop="purpose">Number of image files to read</span><br><span class="add_font_color_general remove_bold"><span class="example_desc">1 (default) | positive integer scalar</span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_property_d0e176972" aria-labelledby="expand_panel_heading_property_d0e176972" class="panel-collapse collapse"><div class="panel-body">
+<p>Number of image files to read in a call to the <code>read</code> function,
+specified as a positive integer scalar. Each call to the <code>read</code> function
+reads at most <code>ReadSize</code> images.</p>
+</div></div></div><div class="panel panel-default " itemscope="" itemprop="property" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/PropertyReference"><div role="tab" data-toggle="collapse" id="expand_panel_heading_property_d0e177005" data-target="#expand_panel_body_property_d0e177005" aria-controls="expand_panel_body_property_d0e177005" class="panel-heading add_cursor_pointer collapsed" aria-expanded="false"><span id="prop_Labels" class="anchor_target"></span><h3 class="panel-title" id="property_d0e177005"><span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/ReferenceEntity" itemprop="refentityobj"><meta itemprop="refentity" content="property:ImageDatastore.Labels"><code itemprop="name" id="propname_Labels">Labels</code></span> — <span itemprop="purpose">File labels</span><br><span class="add_font_color_general remove_bold"><span class="example_desc">categorical, logical, or numeric vector | cell array of character vectors</span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_property_d0e177005" aria-labelledby="expand_panel_heading_property_d0e177005" class="panel-collapse collapse"><div class="panel-body">
+<p>File labels, specified as a vector or cell array of label names,
+with one name for each file in the datastore. The order of the labels
+in the array corresponds to the order of the associated files in the
+datastore. If you specify <code>'LabelSource','foldernames'</code> when
+creating the <code>ImageDatastore</code> object, then the label
+name for a file is the name of the folder containing it. If you do
+not specify <code>'LabelSource','foldernames'</code>, then <code>Labels</code> is
+an empty cell array. If you change the <code>Files</code> property
+after the datastore is created, then the <code>Labels</code> property
+is not automatically updated to incorporate the added files.</p>
+<p class="datatypelist"><strong>Data Types: </strong><code>categorical</code> | <code>cell</code> | <code>logical</code> | <code>double</code> | <code>single</code></p></div></div></div><div class="panel panel-default " itemscope="" itemprop="property" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/PropertyReference"><div role="tab" data-toggle="collapse" id="expand_panel_heading_property_d0e177059" data-target="#expand_panel_body_property_d0e177059" aria-controls="expand_panel_body_property_d0e177059" class="panel-heading add_cursor_pointer collapsed" aria-expanded="false"><span id="prop_ReadFcn" class="anchor_target"></span><h3 class="panel-title" id="property_d0e177059"><span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/ReferenceEntity" itemprop="refentityobj"><meta itemprop="refentity" content="property:ImageDatastore.ReadFcn"><code itemprop="name" id="propname_ReadFcn">ReadFcn</code></span> — <span itemprop="purpose">Function that reads image data</span><br><span class="add_font_color_general remove_bold"><span class="example_desc"><code>@readDatastoreImage</code> (default) | function handle</span></span></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_property_d0e177059" aria-labelledby="expand_panel_heading_property_d0e177059" class="panel-collapse collapse"><div class="panel-body">
+<p>Function that reads image data, specified as a function handle.
+The function must take an image file name as input, and then output
+the corresponding image data. For example, if <code>customreader</code> is
+the specified function to read the image data, then it must have a
+signature similar to the following:</p><div class="code_responsive"><pre class="programlisting">function data = customreader(filename)
+...
+end</pre></div>If there is more than one output argument, then
+only the first is used and the rest are ignored.<p></p>
+<p class="description_valueexample"><strong>Example: </strong><code>@customreader</code></p>
+<p class="datatypelist"><strong>Data Types: </strong><code>function_handle</code></p></div></div></div></div></div></div><div class="clearfix"></div><div itemprop="content" class="ref_sect"><h2 id="butueui-4">Object Functions</h2><div xmlns:file="java.io.File" class="doc_classesgroup_container"><div class="table-responsive"><table class="table table-bordered table-condensed"><tbody><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.counteachlabel.html"><code>countEachLabel</code></a></td>
+<td class="description">Count files in ImageDatastore labels</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.hasdata.html"><code>hasdata</code></a></td>
+<td class="description">Determine if data is available to read</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.numpartitions.html"><code>numpartitions</code></a></td>
+<td class="description">Number of partitions</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.partition.html"><code>partition</code></a></td>
+<td class="description">Partition a datastore</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.preview.html"><code>preview</code></a></td>
+<td class="description">Return subset of data from datastore</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.read.html"><code>read</code></a></td>
+<td class="description">Read data in datastore</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.readall.html"><code>readall</code></a></td>
+<td class="description">Read all data in datastore</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.readimage.html"><code>readimage</code></a></td>
+<td class="description">Read specified image from datastore</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.reset.html"><code>reset</code></a></td>
+<td class="description">Reset datastore to initial state</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.shuffle.html"><code>shuffle</code></a></td>
+<td class="description">Shuffle files in ImageDatastore</td></tr><tr><td class="term notranslate"><a href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.spliteachlabel.html"><code>splitEachLabel</code></a></td>
+<td class="description">Split ImageDatastore labels by proportions</td></tr></tbody></table></div></div>
+</div><div class="clearfix"></div><div itemprop="content" class="ref_sect"><div class="clearfix"></div><div class="examples"><h2 id="examples">Examples</h2><div class="expandableContent" id="expandableExamples"><p class="switch"><a href="javascript:void(0);" class="expandAllLink">collapse all</a></p><div class="panel-group" role="tablist" aria-multiselectable="true" id="expand_panel_heading_buyi31e-1"><div class="panel panel-default "><div role="tab" data-toggle="collapse" id="expand_panel_heading_buyi31e-1" data-target="#expand_panel_body_buyi31e-1" aria-controls="expand_panel_body_buyi31e-1" class="panel-heading add_cursor_pointer" aria-expanded="true"><h3 class="panel-title" id="buyi31e-1">Specify Images to Read<br></h3><span class="icon-arrow-open-down icon_24"></span><span class="icon-arrow-open-right icon_24"></span></div><div role="tabpanel" id="expand_panel_body_buyi31e-1" aria-labelledby="expand_panel_heading_buyi31e-1" class="panel-collapse collapse in" aria-expanded="true"><div class="panel-body"><div class="pull-right examples_short_list" style="width:250px; margin-left: 10px; margin-bottom: 10px;"><div data-pane="metadata" style="margin-bottom: 0px;" class="panel metadata_container"><div class="panel-body metadata_content" style="padding-top:0px; padding-bottom:0px;"><div class="row"><div class="col-xs-12"><a class="btn btn_secondary btn-block" href="matlab:openExample('matlab/ImageDataStoreSpecifyImagesToReadExample')">Open Script</a></div></div></div></div></div>
+
+<p>Create an <code>ImageDatastore</code> object containing four images, and preview the first image.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>imds = imageDatastore({<span style="color:#A020F0">'street1.jpg'</span>,<span style="color:#A020F0">'street2.jpg'</span>,<span style="color:#A020F0">'<span class="highlight_01">peppers</span>.png'</span>,<span style="color:#A020F0">'corn.tif'</span>})
+</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeoutput"><pre>imds = 
+
+  ImageDatastore with properties:
+
+       Files: {
+              ' ...\matlab\toolbox\matlab\demos\street1.jpg';
+              ' ...\matlab\toolbox\matlab\demos\street2.jpg';
+              ' ...\matlab\toolbox\matlab\imagesci\<span class="highlight_01">peppers</span>.png'
+               ... and 1 more
+              }
+    ReadSize: 1
+      Labels: {}
+     ReadFcn: @readDatastoreImage
+
+</pre></div></div></div><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>imshow(preview(imds));
+</pre></div></div></div><p>
+<img src="./the peppers image_files/ImageDataStoreSpecifyImagesToReadExample_01.png" alt=""></p><p>Read only the second and third images, one at a time.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre><span style="color:#0000FF">for</span> i = 2:3
+    img = readimage(imds,i);
+<span style="color:#0000FF">end</span>
+</pre></div></div></div><p>Read all four images and view the third image.</p><div class="code_responsive"><div class="programlisting"><div class="codeinput"><pre>imgs = readall(imds);
+imshow(imgs{3})
+</pre></div></div></div><p>
+<img src="./the peppers image_files/ImageDataStoreSpecifyImagesToReadExample_02.png" alt=""></p></div></div></div></div><div itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/Example" itemprop="example" class="em_example"><meta itemprop="exampleid" content="matlab-ex42904387"><meta itemprop="exampletitle" content="Specify Images to Read"></div></div></div></div><div class="clearfix"></div><div class="ref_sect"><h2 id="butueui-1_seealso">See Also</h2><p><span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/datastore.html"><span itemprop="name"><code>datastore</code></span></a></span> | <span itemscope="" itemtype="http://www.mathworks.com/help/schema/MathWorksDocPage/SeeAlso" itemprop="seealso"><a itemprop="url" href="file:///D:/SJTU/Computer/matlab/help/matlab/ref/imagedatastore.html"><span itemprop="name"><code>imageDatastore</code></span></a></span></p><div class="&#39;examples_container&#39;"><h3 class="remove_border">Topics</h3>
+<div itemprop="content">
+<ul class="list-unstyled"><li><a href="file:///D:/SJTU/Computer/matlab/help/matlab/import_export/read-and-analyze-image-files.html">Read and Analyze Image Files</a></li><li><a href="file:///D:/SJTU/Computer/matlab/help/matlab/import_export/compute-maximum-average-hsv-of-images-with-mapreduce.html">Compute Maximum Average HSV of Images with MapReduce</a></li><li><a href="file:///D:/SJTU/Computer/matlab/help/matlab/import_export/what-is-a-datastore.html">Getting Started with Datastore</a></li></ul></div>
+</div></div><div class="release_introduced"><h4>Introduced in R2015b</h4></div>
+</div></div></section>
+
+<div class="clearfix"></div>
+<div class="feedbackblock">Was this topic helpful?
+<input type="button" value="Yes" onclick="openFeedbackWindow(&#39;http://www.mathworks.com/programs/bounce_hub_help.html?s_cid=Help_Topic_Survey&amp;surveyParams=&#39;+document.location.href+&#39;-YES-R2017a&#39;);">
+<input type="button" value="No" onclick="openFeedbackWindow(&#39;http://www.mathworks.com/programs/bounce_hub_help.html?s_cid=Help_Topic_Survey&amp;surveyParams=&#39;+document.location.href+&#39;-NO-R2017a&#39;);">
+</div>
+<!--Last updated: Thu Feb 16 22:15:15 EST 2017-->
+</div>
+</div>
+</div><!--close_0960-->
+</div><!--close_0970-->
+<div class="body_trail_container">
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+<div class="row"><div class="col-xs-12 col-sm-3"><h5><a href="file:///D:/SJTU/Computer/matlab/help/matlab/index.html?s_cid=doc_ftr">MATLAB Documentation</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="file:///D:/SJTU/Computer/matlab/help/matlab/examples.html?s_cid=doc_ftr">Examples</a></li>
+<li><a href="file:///D:/SJTU/Computer/matlab/help/matlab/functionlist.html?s_cid=doc_ftr">Functions</a></li>
+<li><a href="file:///D:/SJTU/Computer/matlab/help/matlab/release-notes.html?s_cid=doc_ftr">Release Notes</a></li>
+<li><a href="http://www.mathworks.com/help/releases/R2017a/pdf_doc/matlab/index.html?s_cid=doc_ftr">PDF Documentation</a></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-3"><h5><a href="file:///D:/SJTU/Computer/matlab/help/documentation-center.html?s_cid=doc_ftr">Other Documentation</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="file:///D:/SJTU/Computer/matlab/help/simulink/index.html?s_cid=doc_ftr">Simulink</a></li><li><a href="file:///D:/SJTU/Computer/matlab/help/symbolic/index.html?s_cid=doc_ftr">Symbolic Math Toolbox</a></li><li><a href="file:///D:/SJTU/Computer/matlab/help/stats/index.html?s_cid=doc_ftr">Statistics and Machine Learning Toolbox</a></li><li><a href="file:///D:/SJTU/Computer/matlab/help/images/index.html?s_cid=doc_ftr">Image Processing Toolbox</a></li><li><a href="file:///D:/SJTU/Computer/matlab/help/signal/index.html?s_cid=doc_ftr">Signal Processing Toolbox</a></li><li><a href="file:///D:/SJTU/Computer/matlab/help/documentation-center.html?s_cid=doc_ftr">Documentation Home</a></li></ul>
+</div>
+<div class="col-xs-12 col-sm-3"><h5><a href="http://www.mathworks.com/support/?s_cid=doc_ftr">Support</a></h5>
+<ul class="list-unstyled hidden-xs"><li><a href="http://www.mathworks.com/matlabcentral/answers/index?s_cid=doc_ftr">MATLAB Answers</a></li><li><a href="http://www.mathworks.com/support/install-matlab.html?s_cid=doc_ftr">Installation Help</a></li><li><a href="http://www.mathworks.com/support/bugreports/?s_cid=doc_ftr">Bug Reports</a></li><li><a href="http://www.mathworks.com/products/availability/?s_cid=doc_ftr">Product Requirements</a></li><li><a href="http://www.mathworks.com/downloads/?s_cid=doc_ftr">Software Downloads</a></li></ul>
+</div>
+</div>
+</div>
+</div>
+</div><!--END.CLASS container-fluid-->
+</div><!--END.CLASS body_trail_container-->
+<footer id="footer" class="bs-footer">
+<div class="container-fluid">
+<div class="footer">
+<div class="row">
+<div class="col-xs-12">
+<p class="copyright">© 1994-2017 The MathWorks, Inc.</p>
+<ul class="footernav"><li class="footernav_help"><a href="matlab:web(matlab.internal.licenseAgreement)">Terms of Use</a></li><li class="footernav_patents"><a href="matlab:web([matlabroot '/patents.txt'])">Patents</a></li><li class="footernav_trademarks"><a href="matlab:web([matlabroot '/trademarks.txt'])">Trademarks</a></li><li class="footernav_piracy"><a href="matlab:web([docroot '/acknowledgments.html'])">Acknowledgments</a></li></ul></div>
+</div>
+</div>
+</div>
+</footer>
+</div><!--close row-offcanvas-->
+
+
+<a class="btn btn_primary" id="go-top" style="display: inline;"><span class="icon-arrow-open-up icon_24"></span></a></body></html>
