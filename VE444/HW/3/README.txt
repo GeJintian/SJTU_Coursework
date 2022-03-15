@@ -1,0 +1,2 @@
+Python is used in this homework. The necessary packages are: matplotlib, numpy. Please install these two packages at first.
+There are totally 5 .py files in the zip file. Each of them corespondes to one question in the homework problem.
