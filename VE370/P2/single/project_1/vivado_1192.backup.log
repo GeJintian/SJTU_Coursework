@@ -1,0 +1,1244 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Jul  3 16:13:37 2020
+# Process ID: 1192
+# Current directory: C:/Users/69009/Desktop/3/ve370/project/2/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17036 C:\Users\69009\Desktop\3\ve370\project\2\project_1\project_1.xpr
+# Log file: C:/Users/69009/Desktop/3/ve370/project/2/project_1/vivado.log
+# Journal file: C:/Users/69009/Desktop/3/ve370/project/2/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SJTU/XILINX/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 741.277 ; gain = 135.121
+update_compile_order -fileset sources_1
+close [ open C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/PC.v w ]
+add_files C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/PC.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+file mkdir C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sim_1/new/single_sim.v w ]
+add_files -fileset sim_1 C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sim_1/new/single_sim.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'single_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj single_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALUcontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/IM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single
+INFO: [VRFC 10-2458] undeclared symbol BranchEq, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+INFO: [VRFC 10-2458] undeclared symbol BranchNe, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sim_1/new/single_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SJTU/XILINX/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 69a1d9d4d97d47ae87dec0d24c697bd3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot single_sim_behav xil_defaultlib.single_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2991] 'ALUcode' is not declared under prefix 'ALUOp' [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:59]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 6 for port 'instruction' [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+WARNING: [VRFC 10-3705] select index 41 into 'memory' is out of bounds [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/IM.v:72]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 765.828 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'single_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj single_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALUcontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/IM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single
+INFO: [VRFC 10-2458] undeclared symbol BranchEq, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+INFO: [VRFC 10-2458] undeclared symbol BranchNe, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sim_1/new/single_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SJTU/XILINX/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 69a1d9d4d97d47ae87dec0d24c697bd3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot single_sim_behav xil_defaultlib.single_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 6 for port 'instruction' [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+WARNING: [VRFC 10-3705] select index 41 into 'memory' is out of bounds [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/IM.v:72]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.SignExtend
+Compiling module xil_defaultlib.ALUcontrol
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.single
+Compiling module xil_defaultlib.single_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot single_sim_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/single_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Jul  3 17:47:27 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 779.820 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "single_sim_behav -key {Behavioral:sim_1:Functional:single_sim} -tclbatch {single_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source single_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting
+Episode:           0
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           1
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           2
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           3
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           4
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           5
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           6
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           7
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           8
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           9
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          10
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          11
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          12
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          13
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          14
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          15
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'single_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 788.742 ; gain = 8.922
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'single_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj single_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALUcontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/IM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single
+INFO: [VRFC 10-2458] undeclared symbol BranchEq, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+INFO: [VRFC 10-2458] undeclared symbol BranchNe, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sim_1/new/single_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SJTU/XILINX/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 69a1d9d4d97d47ae87dec0d24c697bd3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot single_sim_behav xil_defaultlib.single_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 6 for port 'instruction' [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+WARNING: [VRFC 10-3705] select index 41 into 'memory' is out of bounds [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/IM.v:72]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.SignExtend
+Compiling module xil_defaultlib.ALUcontrol
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.single
+Compiling module xil_defaultlib.single_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot single_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "single_sim_behav -key {Behavioral:sim_1:Functional:single_sim} -tclbatch {single_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source single_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting
+Episode:           0
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           1
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           2
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           3
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           4
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           5
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           6
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           7
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           8
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           9
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          10
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          11
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          12
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          13
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          14
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          15
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          16
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          17
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          18
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          19
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          20
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          21
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          22
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          23
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          24
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          25
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          26
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          27
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          28
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          29
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          30
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          31
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          32
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          33
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          34
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          35
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          36
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          37
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          38
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          39
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          40
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          41
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          42
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          43
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          44
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          45
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          46
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          47
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          48
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          49
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          50
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          51
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          52
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          53
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          54
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          55
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          56
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          57
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          58
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'single_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 884.156 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'single_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj single_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALUcontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/IM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single
+INFO: [VRFC 10-2458] undeclared symbol BranchEq, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+INFO: [VRFC 10-2458] undeclared symbol BranchNe, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sim_1/new/single_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SJTU/XILINX/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 69a1d9d4d97d47ae87dec0d24c697bd3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot single_sim_behav xil_defaultlib.single_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 6 for port 'instruction' [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:45]
+WARNING: [VRFC 10-3705] select index 41 into 'memory' is out of bounds [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/IM.v:72]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.SignExtend
+Compiling module xil_defaultlib.ALUcontrol
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.single
+Compiling module xil_defaultlib.single_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot single_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "single_sim_behav -key {Behavioral:sim_1:Functional:single_sim} -tclbatch {single_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source single_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting
+Episode:           0
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           1
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           2
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           3
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           4
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           5
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           6
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           7
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           8
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           9
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          10
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          11
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          12
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          13
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          14
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          15
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          16
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          17
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          18
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          19
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          20
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          21
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          22
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          23
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          24
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          25
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          26
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          27
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          28
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          29
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          30
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          31
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          32
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          33
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          34
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          35
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          36
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          37
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          38
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          39
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          40
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          41
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          42
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          43
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          44
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          45
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          46
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          47
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          48
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          49
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          50
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          51
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          52
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          53
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          54
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          55
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          56
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          57
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          58
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          59
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          60
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          61
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          62
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          63
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          64
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          65
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          66
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          67
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          68
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          69
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          70
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          71
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          72
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          73
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          74
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          75
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          76
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          77
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          78
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          79
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          80
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          81
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          82
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          83
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          84
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          85
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          86
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          87
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          88
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          89
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          90
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          91
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          92
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          93
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          94
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          95
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          96
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          97
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          98
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          99
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'single_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 884.156 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'single_sim' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj single_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/ALUcontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALUcontrol
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/IM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/SignExtend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single
+INFO: [VRFC 10-2458] undeclared symbol BranchEq, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:46]
+INFO: [VRFC 10-2458] undeclared symbol BranchNe, assumed default net type wire [C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sources_1/new/single.v:46]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.srcs/sim_1/new/single_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module single_sim
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/SJTU/XILINX/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 69a1d9d4d97d47ae87dec0d24c697bd3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot single_sim_behav xil_defaultlib.single_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.Control
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.SignExtend
+Compiling module xil_defaultlib.ALUcontrol
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.single
+Compiling module xil_defaultlib.single_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot single_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/69009/Desktop/3/ve370/project/2/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "single_sim_behav -key {Behavioral:sim_1:Functional:single_sim} -tclbatch {single_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source single_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting
+Episode:           0
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           1
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           2
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           3
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           4
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           5
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           6
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           7
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           8
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:           9
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          10
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          11
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          12
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          13
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          14
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          15
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          16
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          17
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          18
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          19
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          20
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          21
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          22
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          23
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          24
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          25
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          26
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          27
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          28
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          29
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          30
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          31
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          32
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          33
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          34
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          35
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          36
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          37
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          38
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          39
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          40
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          41
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          42
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          43
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          44
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          45
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          46
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          47
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          48
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          49
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          50
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          51
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          52
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          53
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          54
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          55
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          56
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          57
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          58
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          59
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          60
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          61
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          62
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          63
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          64
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          65
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          66
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          67
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          68
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          69
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          70
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          71
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          72
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          73
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          74
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          75
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          76
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          77
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          78
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          79
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          80
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          81
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          82
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          83
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          84
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          85
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          86
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          87
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          88
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          89
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          90
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          91
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          92
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          93
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          94
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          95
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          96
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          97
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          98
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+Episode:          99
+[$s0] = 00000000, [$s1] = 00000000, [$s2] = 00000000, [$s3] = 00000000, [$s4] = 00000000
+[$t0] = 00000000, [$t1] = 00000000
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'single_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 916.273 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  3 19:04:53 2020...
