@@ -1,6 +1,6 @@
 # SJTU_Coursework
 This reposity contains most of my courseworks coding in SJTU.<br>
-Notice that due to the long time, many projects are not guaranteed to run.
+Notice that this reposity is summarized after my graduation. Therefore, due to the long time, many projects are not guaranteed to run.
 ## List of courseworks
 #### Coding
 - Vg101
