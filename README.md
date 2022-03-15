@@ -9,13 +9,9 @@ Notice that this reposity is summarized after my graduation. Therefore, due to t
 - Ve492
 - Ve475
 - Ve441
-- Ve444
+- Vg444
 - Ve450
 #### Hardware Development
 - Ve270
 - Ve370
-#### Latex
-- Vv285
-- Vv286
-- Ve401
-- Ve556
+
