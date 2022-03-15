@@ -1,0 +1,377 @@
+\documentclass[12pt,a4paper]{article}
+%\usepackage{ctex}
+\usepackage{amsmath,amscd,amsbsy,amssymb,latexsym,url,bm,amsthm}
+\usepackage{epsfig,graphicx,subfigure}
+\usepackage{enumitem,balance}
+\usepackage{wrapfig}
+\usepackage{mathrsfs,euscript}
+\usepackage[x11names,svgnames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage[vlined,ruled,commentsnumbered,linesnumbered]{algorithm2e}
+\usepackage{listings}
+\usepackage{multicol}
+%\usepackage{fontspec}
+
+\renewcommand{\listalgorithmcfname}{List of Algorithms}
+\renewcommand{\algorithmcfname}{Alg.}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exercise}{Exercise}
+\newtheorem*{solution}{Solution}
+\newtheorem{definition}{Definition}
+\theoremstyle{definition}
+
+
+%\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\newcommand{\postscript}[2]
+ {\setlength{\epsfxsize}{#2\hsize}
+  \centerline{\epsfbox{#1}}}
+
+\renewcommand{\baselinestretch}{1.0}
+
+\setlength{\oddsidemargin}{-0.365in}
+\setlength{\evensidemargin}{-0.365in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{7in}
+\makeatletter \renewenvironment{proof}[1][Proof] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+\makeatletter
+\renewenvironment{solution}[1][Solution] {\par\pushQED{\qed}\normalfont\topsep6\p@\@plus6\p@\relax\trivlist\item[\hskip\labelsep\bfseries#1\@addpunct{.}]\ignorespaces}{\popQED\endtrivlist\@endpefalse} \makeatother
+
+
+\definecolor{codegreen}{rgb}{0.44,0.68,0.28}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.96,0.96,0.96}
+
+\lstset{
+language=C++,
+frame=shadowbox,
+keywordstyle = \color{blue}\bfseries,
+commentstyle=\color{codegreen},
+tabsize = 4,
+backgroundcolor=\color{backcolour},
+numbers=left,
+numbersep=5pt,
+breaklines=true,
+emph = {int,float,double,char},emphstyle=\color{orange},
+emph ={[2]const, typedef},emphstyle = {[2]\color{red}} }
+
+
+
+\begin{document}
+\noindent
+
+%========================================================================
+\noindent\framebox[\linewidth]{\shortstack[c]{
+\Large{\textbf{Lab02-Sorting and Searching}}\vspace{1mm}\\
+VE281 - Data Structures and Algorithms, Xiaofeng Gao, TA: Li Ma, Autumn 2019}}
+%CS26019 - Algorithm Design and Analysis, Xiaofeng Gao, Autumn 2019}}
+\begin{center}
+\footnotesize{\color{red}$*$ Please upload your assignment to website. Contact webmaster for any questions.}
+
+\footnotesize{\color{blue}$*$ Name: Jintian Ge  \quad Student ID: 517021911142 \quad Email: gejintian@sjtu.edu.cn}
+\end{center}
+
+
+\begin{enumerate}
+
+\item \textbf{Cocktail Sort.} Consider the pseudo code of a sorting algorithm shown in Alg.~\ref{Alg-Cocktail}, which is called \emph{Cocktail Sort}, then answer the following questions.
+
+
+\begin{minipage}[t]{0.4\textwidth}
+\begin{enumerate}
+\item What is the minimum number of element comparisons performed by the algorithm? When is this minimum achieved?
+\item What is the maximum number of element comparisons performed by the algorithm? When is this maximum achieved?
+\item Express the running time of the algorithm in terms of the $O$ notation.
+\item Can the running time of the algorithm be expressed in terms of the $\Theta$ notation? Explain.
+\end{enumerate}
+\end{minipage}
+\hspace{2mm}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{algorithm}[H]
+		\caption{CocktailSort($a$[$\cdot$], $n$)} \label{Alg-Cocktail}
+		\KwIn {an array $a$, the length of array $n$}
+		\For {$i=0; i<n-1; i++$}
+		{
+			$bFlag \leftarrow true$;
+			
+			\For {$j=i;j<n-i-1;j++$}
+			{
+				\If {$a[j]>a[j+1]$}
+				{
+					swap($a[j]$, $a[j+1]$)\;
+					$bFlag \leftarrow false$;
+				}
+			}
+			
+			\If {bFlag}
+			{
+				break;
+			}
+			
+			$bFlag \leftarrow true$;			
+			
+			\For {$j=n-i-1;j>i;j--$}
+			{
+				\If {$a[j]<a[j-1]$}
+				{
+					swap($a[j]$, $a[j-1]$)\;
+					$bFlag \leftarrow false$;
+				}
+			}
+			\If {bFlag}
+			{
+				break;
+			}
+		}
+\end{algorithm}
+\end{minipage}
+
+%\end{multicols}
+\begin{solution}
+\begin{enumerate}
+    \item The minimum number of comparisons is $n-1$.
+    
+    It is achieved when the input array has already been sorted.
+    \item The worst running time happens when the for loop is fully executed. When n is odd, the number of element comparisons should be: $2(n-1)+2(n-3)+2(n-5)+\dots+ 2\times 2+0=\frac{1}{2}(n^2-1)$. When n is even, the number of element comparisons should be:$2(n-1)+2(n-3)+\dots+2\times 3+1 = \frac{1}{2}n^2$
+    
+    It is achieved when the input array is in reverse order.
+    \item The worst case is the upper bound of the running time of the algorithm. 
+    
+    Since from (b) we know that the running time of the worst case is $\frac{1}{2}(n^2-1)$ for odd $n$ and $\frac{1}{2}n^2$ for even $n$, the running time of this algorithm is $O(n^2)$.
+    \item If it can be expressed in terms of the $\Theta$ notation, we need to prove that the best case can be represented as $\Omega(n^2)$.
+    
+    It is clear that $cn^2\geq n$ for all $n>c$ regardless how large c is. Therefore, the best case cannot be represented as $\Omega(n^2)$. Hence, the running time cannot be expressed in terms of the $\Theta$ notation
+\end{enumerate}
+
+\end{solution}
+
+\item \textbf{In-Place.} In place means an algorithm requires $O(1)$ additional memory, including the stack space used in recursive calls. Frankly speaking, even for a same algorithm, different implementation methods bring different in-place characteristics. Taking \emph{Binary Search} as an example, we give two kinds of implementation pseudo codes shown in Alg.~\ref{Alg-RecursiveBS} and Alg.~\ref{Alg-NonRecursiveBS}. Please analyze whether they are in place.
+    
+    Next, please give one similar example regarding other algorithms you know to illustrate such phenomenon.
+
+\item  \textbf{Master Theorem}.
+
+\begin{definition}[Matrix Multiplication]
+The product of two $n \times n$ matrices $X$ and $Y$ is a third $n \times n$ matrix $Z = XY$, with $(i,j)$th entry
+$$Z_{ij}=\sum_{k=1}^{n}X_{ik}Y_{kj}.$$
+\end{definition}
+$Z_{ij}$ is the dot product of the $i$th row of $X$ with $j$th column of $Y$. The preceding formula implies an $O(n^3)$ algorithm for matrix multiplication.
+
+\begin{minipage}[t]{0.49\textwidth}
+\begin{algorithm}[H]
+	\BlankLine
+	\SetKwInOut{Input}{Input}
+	\SetKwInOut{Output}{Output}
+	\caption{BinSearch($a[\cdot]$, $x$, $low$, $high$)} \label{Alg-RecursiveBS}
+	\Input{a sorted array $a$ of $n$ elements, an integer $x$, first index $low$, last index $high$}
+	\Output{first index of key $x$ in $a$, $-1$ if not found}
+	\BlankLine
+	\If{$high < low$}{
+	\Return{-1};
+	}
+    $mid \leftarrow low +((high - low) / 2)$;
+    
+    
+    \uIf{$a[mid] > x$}{
+	$mid \leftarrow$ {$\text{BinSearch}(a,x,low, mid - 1)$};
+	}
+    \uElseIf{$a[mid] < x$}{
+    $mid \leftarrow$ {$\text{BinSearch}(a,x,mid+1, high)$};
+    }
+   \Else {
+    \Return{$mid$};
+    }
+\end{algorithm}
+\end{minipage}
+\begin{minipage}[t]{0.455\textwidth}
+\begin{algorithm}[H]
+\BlankLine
+	\SetKwInOut{Input}{input}
+	\SetKwInOut{Output}{output}
+	\caption{BinSearch($a[\cdot]$, $x$, $low$, $high$)} \label{Alg-NonRecursiveBS}
+	\Input{a sorted array $a$ of $n$ elements, an integer $x$, first index $low$, last index $high$}	\Output{first index of key $x$ in $a$, $-1$ if not found}
+	\BlankLine	
+	\While{$low \leq high$}{
+	$mid \leftarrow low + ((high - low) / 2)$;
+	
+	\uIf{$a[mid] > x$}
+	{
+		$high \leftarrow mid - 1$;
+	}
+	\uElseIf{$a[mid] < x$}{
+	    $low \leftarrow mid + 1$;
+	}
+	\Else{
+	    \Return{$mid$};
+	}
+	}
+	\Return{-1};
+\end{algorithm}\end{minipage}
+\begin{solution}
+Alg.2 is not in place while Alg.3 is in place.
+
+For Alg.2, it calls stacks as many time as comparisons. So the space complexity is equal to the time complexity, which is $O(\log n)$. Therefore, it is not in place.
+
+For Alg.3, it doesn't call any extra stacks as well as any extra arrays. So, the space complexity of this algorithm is $O(1)$, which indicates that it is in place.
+
+The following is an example based on the dichotomy which finds a zero point of a quadratic function inside a section. Assume the function is $f(x)$. The two different implementations are:
+
+
+\begin{minipage}[t]{0.49\textwidth}
+\begin{algorithm}[H]
+	\BlankLine
+	\SetKwInOut{Input}{Input}
+	\SetKwInOut{Output}{Output}
+	\caption{Dicho($f(x)$, $left$, $right$)} \label{Alg-RecursiveDC}
+	\Input{target function $f(x)$, the left side of the section $left$, the right side of the section $right$}
+	\Output{one zero point of this function, NaN if not found}
+	\BlankLine
+    
+    
+    \uIf{$f(right)==0$}{
+	\Return{$right$};
+	}
+    \uElseIf{$f(left)==0$}{
+    \Return{$left$};
+    }
+    \uElseIf{$f(right)*f(\frac{right+left}{2})\leq 0$}{
+    $\text{Dicho}(f(x),\frac{right+left}{2},right)$;
+    }
+    \uElseIf{$f(left)*f(\frac{right+left}{2})$}{
+    $\text{Dicho}(f(x),left,\frac{right+left}{2})\leq 0$;
+    }
+   \Else {
+    \Return{NaN};
+    }
+\end{algorithm}
+\end{minipage}
+\begin{minipage}[t]{0.455\textwidth}
+\begin{algorithm}[H]
+\BlankLine
+	\SetKwInOut{Input}{input}
+	\SetKwInOut{Output}{output}
+	\caption{Dicho($f(x)$, $left$, $right$)} \label{Alg-NonRecursiveBS}
+	\Input{target function $f(x)$, the left side of the section $left$, the right side of the section $right$}	\Output{one zero point of this function, NaN if not found}
+	\BlankLine	
+	\While{$left \neq right$}{
+	$mid \leftarrow \frac{right+left}{2}$;
+	
+	\uIf{$f(mid)f(left)\leq 0$}
+	{
+		$right\leftarrow mid$;
+	}
+	\uElseIf{$f(mid)f(right)\leq 0$}{
+	    $left\leftarrow mid$;
+	}
+	    \uElseIf{$f(right)==0$}{
+    \Return{$right$};
+    }
+	\uElseIf{$f(left)==0$}{
+    \Return{$left$};
+    }
+	}
+	\Return{NaN};
+\end{algorithm}\end{minipage}
+Like binary search, this algorithm break the section into two parts. So, the time complexity is just $O(\log n)$. For the first implementation in Alg.4, it needs space same as time. So its space complexity is $O(\log n)$, which is not in place. For the second implementation is Alg.5, it doesn't call any stack and thus has space complexity $O(1)$, which is in place.
+\end{solution}
+
+
+
+In 1969, the German mathematician Volker Strassen announced a siginificantly more efficient algorithm, based upon divide-and-conquer. Matrix Multiplication can be performed blockwise. To see what this means, carve $X$ into four $\frac{n}{2} \times \frac{n}{2}$ blocks, and also $Y$:
+\begin{displaymath}
+X=
+\left(\begin{array}{c|c}
+A & B \\
+\hline
+C & D \end{array}\right), \quad
+Y=\left(\begin{array}{c|c}
+E & F \\
+\hline
+G & H \end{array}\right).
+ \end{displaymath}
+
+Then their product can be expressed in terms of these blocks and is exactly as if the blocks were single elements.
+
+ \begin{displaymath}
+ XY=
+\left(\begin{array}{c|c}
+A & B \\
+\hline
+C & D \end{array}\right)
+\left(\begin{array}{c|c}
+E & F \\
+\hline
+G & H \end{array}\right)
+=
+\left(\begin{array}{c|c}
+AE+BG & AF+BH \\
+\hline
+CE+DG & CF+DH \end{array}\right).
+ \end{displaymath}
+
+To compute the size-$n$ product $XY$, recursively compute eight size-$\frac{n}{2}$ products $AE$,  $BG$, $AF$, $BH$, $CE$, $DG$, $CF$, $DH$ and then do a few additions.
+
+\begin{enumerate}
+\item Write down the recurrence function of the above method and compute its running time by Master Theorem.
+
+\begin{solution}
+The algorithm of the function is shown as following:
+
+\begin{lstlisting}[language=C++]
+// REQUIRES: two matrices A and B
+// EFFECTS: return the result of A multiply with B
+mat Matmul(mat A, mat B){
+    if(length(A) == 1) return [A*B].
+    //If A has only one element, return its multiple result with B as a matrix with one element
+    [A1, A2, A3, A4] = SplitMat(A);//SplitMat is used to split A into four parts.
+    [B1, B2, B3, B4] = SplitMat(B);
+    return AppendMat(Matmul(A1,B1) + Matmul(A2,B3),
+                     Matmul(A1,B2) + Matmul(A2,B4),
+                     Matmul(A3,B1) + Matmul(A4,B3),
+                     Matmul(A3,B2) + Matmul(A4,B4));
+    //AppendMat is used to append four matrix together.
+}
+\end{lstlisting}
+We have four matrix additions in one recurrent process, with each matric containing $({\frac {n}{2}})^2=\frac {n^2}{4}$ elements, so the time complexity of addition is just $O(n^2)$, then we have the following function: $$T(n) \leq 8T(\frac{n}{2}) + O(n^2)$$
+According to Master Theorem, we have $a=8,b=2$ and $d=2$. Since $8>2^2$, we conclude that the time complexity of this algorithm should be $$O(n^{\log_{2} {8}})=O(n^3)$$.
+
+\end{solution}
+
+\item The efficiency can be further improved. It turns out $XY$ can be computed from just seven $\frac{n}{2}\times \frac{n}{2}$ subproblems.
+
+\begin{displaymath}
+ XY=
+\left(\begin{array}{c|c}
+P_{5}+P_{4}-P_{2}+P_{6} & P_{1}+P_{2} \\
+\hline
+P_{3}+P_{4} & P_{1}+P_{5}-P_{3}-P_{7} \end{array}\right),
+\end{displaymath}
+where
+\begin{align*}
+P_{1}&=A(F-H), \qquad P_{2}=(A+B)H, \qquad P_{3}=(C+D)E, \qquad P_{4}=D(G-E),\\
+P_{5}&=(A+D)(E+H),\qquad P_{6}=(B-D)(G+H),\qquad P_{7}=(A-C)(E+H).
+\end{align*}
+
+Write the corresponding recurrence function and compute the new running time.
+\begin{solution}
+For this time, we only have 7 multiplies and 18 additions/subtractions in this algorithm. The time complexity of these additions/subtractions is still $O(n)$. Therefore, corresponding recurrence function should be:$$T(n)\leq 7T(\frac{n}{2})+O(n^2)$$
+Hence, according to Master Theorem, the new running time is $$O(n^{\log_{2} {7}})$$
+\end{solution}
+\end{enumerate}
+
+
+\end{enumerate}
+
+%========================================================================
+\end{document}
+
