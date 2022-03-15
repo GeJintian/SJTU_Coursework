@@ -1,0 +1,8 @@
+ifenemy 4  If there is an enemy 
+left
+go 1
+infect
+go 1
+
+
+FADFSADFASDFSADFASF

@@ -1,0 +1,6 @@
+4
+4
+hop.txt east 2 0
+flytrap.txt west 2 2
+landmine.txt west 0 1
+stander.txt west 1 0
