@@ -1,0 +1,262 @@
+.text
+.globl __start
+__start:
+main:
+#declare of A[]		
+		addi $sp, $sp, -120		#adjust stack for a array with 30 items
+
+		addi $s4, $0, -3		#declare value of A[i]
+		sw $s4, 0($sp)
+		addi $s4, $0, -1
+		sw $s4, 4($sp)
+		addi $s4, $0, 0
+		sw $s4, 8($sp)
+		addi $s4, $0, 2
+		sw $s4, 12($sp)
+		addi $s4, $0, 1
+		sw $s4, 16($sp)
+		addi $s4, $0, -3
+		sw $s4, 20($sp)
+		addi $s4, $0, 0
+		sw $s4, 24($sp)
+		addi $s4, $0, 3
+		sw $s4, 28($sp)
+		addi $s4, $0, 2
+		sw $s4, 32($sp)
+		addi $s4, $0, 1
+		sw $s4, 36($sp)
+		addi $s4, $0, -3
+		sw $s4, 40($sp)
+		addi $s4, $0, -1
+		sw $s4, 44($sp)
+		addi $s4, $0, 2
+		sw $s4, 48($sp)
+		addi $s4, $0, -3
+		sw $s4, 52($sp)
+		addi $s4, $0, 0
+		sw $s4, 56($sp)
+		addi $s4, $0, 3
+		sw $s4, 60($sp)
+		addi $s4, $0, 2
+		sw $s4, 64($sp)
+		addi $s4, $0, 1
+		sw $s4, 68($sp)
+		addi $s4, $0, -3
+		sw $s4, 72($sp)
+		addi $s4, $0, -1
+		sw $s4, 76($sp)
+		addi $s4, $0, 0
+		sw $s4, 80($sp)
+		addi $s4, $0, 2
+		sw $s4, 84($sp)
+		addi $s4, $0, 1
+		sw $s4, 88($sp)
+		addi $s4, $0, -3
+		sw $s4, 92($sp)
+		addi $s4, $0, 0
+		sw $s4, 96($sp)
+		addi $s4, $0, 3
+		sw $s4, 100($sp)
+		addi $s4, $0, 2
+		sw $s4, 104($sp)
+		addi $s4, $0, 1
+		sw $s4, 108($sp)
+		addi $s4, $0, 0
+		sw $s4, 112($sp)
+		addi $s4, $0, -2
+		sw $s4, 116($sp)
+		
+		
+
+#run the countArray function 
+		addi $s4, $0, 30 		# int size = 30, size is store in $s4 
+
+		addi $a0, $sp, 0		# $a0 = &A[]
+		add $a1, $0, $s4  		# $a1 = size
+		addi $a2, $0, 1			# $a2 = cntType = 1
+		jal countArray			# run the countArray function
+		addi $0, $0, 0			# meaningless instruction for latency 
+		addi $t7, $v0, 0		# $t7 = Pos_Cnt
+	
+		addi $a0, $sp, 0		# $a0 = &A[]
+		add $a1, $0, $s4 		# $a1 = size
+		addi $a2, $0, -1		# $a2 = cntType = 1
+		jal countArray			# run the countArray function
+		addi $0, $0, 0			# meaningless instruction for latency
+		addi $t8, $v0, 0		# $t8 = Neg_Cnt
+
+
+		addi $a0, $sp, 0		# $a0 = &A[]
+		add $a1, $0, $s4		# $a1 = size
+		addi $a2, $0, 0			# $a2 = cntType = 0
+		jal countArray			# run the countArray function
+		addi $0, $0, 0			# meaningless instruction for latency
+		addi $t9, $v0, 0		# $t9 = Zero_Cnt
+
+		addi $sp, $sp, 120      #release the stack which is used for array 
+
+#print the result
+		addi $sp, $sp, -4		# addjust stack for 4 items
+		addi $s4, $0, 80 		# save ascii code for 'P' in $s4
+		sb $s4, 0($sp)  		# save 'P' in stack 
+		addi $s4, $0, 111		# save ascii code for 'o' in $s4
+		sb $s4, 1($sp)			# save 'o' in stack 
+		addi $s4, $0, 115		# save ascii code for 's' in $s4
+		sb $s4, 2($sp)			# save 's' in stack
+		addi $s4, $0, 58		# save ascii code for 's' in $s4
+		sb $s4, 3($sp)			# save ':' in stack
+		addi $a0, $sp , 0		# $a0 = $sp 
+ 	 	addi $v0, $0, 4			# prepare to print string (systtem call 4)
+		syscall					# print "Pos:"
+		addi $sp, $sp, 4 		# release stack
+	
+		addi $v0, $0, 1         # prepare to print integer (systtem call 1)
+		addi $a0, $t7, 0	    # $a0 = Pos_Cnt
+		syscall 			 	# print Pos_Cnt
+
+		addi $sp, $sp, -4		# addjust stack for 4 items
+		addi $s4, $0, 10 		# save ascii code for '\n' in $s4
+		sb $s4, 0($sp) 		 	# save '\n' in stack 
+		addi $s4 ,$0 ,0         # save ascii code for 'Null' in $s4
+		sb $s4, 1($sp)		 	# save 'Null' in stack  
+		addi $s4 ,$0 ,0         # save ascii code for 'Null' in $s4
+		sb $s4, 2($sp)			# save 'Null' in stack 
+		addi $s4 ,$0 ,0         # save ascii code for 'Null' in $s4
+		sb $s4, 3($sp)			# save 'Null' in stack 
+		addi $a0, $sp,0			# $a0 = $sp
+    	addi $v0, $0, 4			# prepare to print string (systtem call 4)
+		syscall					# print '\n'
+		addi $sp, $sp, 4		# release stack	
+
+		addi $sp, $sp, -4		# addjust stack for 4 items
+		addi $s4, $0, 78 		# save ascii code for 'N' in $s4
+		sb $s4, 0($sp)  		# save 'N' in stack 
+		addi $s4, $0, 101		# save ascii code for 'e' in $s4
+		sb $s4, 1($sp)			# save 'e' in stack 
+		addi $s4, $0, 103       # save ascii code for 'g' in $s4
+		sb $s4, 2($sp)			# save 'g' in stack 
+		addi $s4, $0, 58		# save ascii code for ':' in $s4
+		sb $s4, 3($sp)			# save ':' in stack 
+		addi $a0, $sp, 0 		# $a0 = $sp
+    	addi $v0, $0, 4			# prepare to print string (systtem call 4)
+		syscall					# print "Neg:"
+		addi $sp, $sp, 4		# release stack
+
+		addi $v0, $0, 1         # prepare to print integer (systtem call 1)
+		addi $a0, $t8, 0	    # $a0 = Neg_Cnt
+		syscall 			 	# print Neg_Cnt
+
+		addi $sp, $sp, -4		# addjust stack for 4 items
+		addi $s4, $0, 10 		# save ascii code for '\n' in $s4
+		sb $s4, 0($sp) 		 	# save '\n' in stack 
+		addi $s4 ,$0 ,0         # save ascii code for 'Null' in $s4
+		sb $s4, 1($sp)			# save 'Null' in stack  
+		addi $s4 ,$0 ,0         # save ascii code for 'Null' in $s4
+		sb $s4, 2($sp)	 		# save 'Null' in stack 
+		addi $s4 ,$0 ,0         # save ascii code for 'Null' in $s4
+		sb $s4, 3($sp)			# save 'Null' in stack 
+		addi $a0, $sp,0			# $a0 = $sp
+    	addi $v0, $0, 4			# prepare to print string (systtem call 4)
+		syscall					# print '\n'
+		addi $sp, $sp, 4		# release stack
+
+		addi $sp, $sp, -8		# addjust stack for 5 items
+		addi $s4, $0, 90 		# save ascii code for 'Z' in $s4
+		sb $s4, 0($sp)  		# save 'Z' in stack 
+		addi $s4, $0, 101		# save ascii code for 'e' in $s4
+		sb $s4, 1($sp)			# save 'e' in stack 
+		addi $s4, $0, 114		# save ascii code for 'r' in $s4
+		sb $s4, 2($sp)			# save 'r' in stack 
+		addi $s4, $0, 111		# save ascii code for 'o' in $s4
+		sb $s4, 3($sp)			# save 'o' in stack 
+		addi $s4 ,$0 ,58        # save ascii code for ':' in $s4
+		sb $s4, 4($sp)			# save ':' in stack
+		addi $s4 ,$0 ,0        # save ascii code for 'Null' in $s4
+		sb $s4, 5($sp)			# save 'Null' in stack  
+		addi $s4 ,$0 ,0        # save ascii code for 'Null' in $s4
+		sb $s4, 6($sp)			# save 'Null' in stack 
+		addi $s4 ,$0 ,0        # save ascii code for 'Null' in $s4
+		sb $s4, 7($sp)			# save 'Null' in stack 
+		addi $a0, $sp , 0 		# $a0 = $sp
+    	addi $v0, $0, 4		    # prepare to print string (systtem call 4)
+		syscall					# print "Zero:"
+		addi $sp, $sp, 8			# release stack
+
+		addi $v0, $0, 1         # prepare to print integer (systtem call 1)
+		addi $a0, $t9, 0	    # $a0 = Zero_Cnt
+		syscall 			 	# print Zero_Cnt
+
+#exit	
+		addiu $v0, $0, 10 		# prepare to exit (system call 10)
+		syscall 				# exit
+
+countArray:
+		addi $sp, $sp, -4		# adjust stack for 1 items	
+		sw $ra, 0($sp)			# save return address
+		addi $t4, $a0, 0 		# $t4 = &A[]
+		addi $t5, $a1, 0 		# $t5 = size
+		addi $t6, $a2, 0 		# $t6 = cntType 
+		addi $s0, $0, 0  		# initialize i as $s0 
+		addi $s1, $0, 0  		# initialize cnt as $s1
+	
+		addi $s0, $t5, 0 		# i = size
+FOR:   	addi $s0, $s0, -1 		# i--
+		slti $s2, $s0, 0 		# if i < 0, $s2 = 1, else $s2 = 0
+
+		sll $t3, $s0, 2 		# mutiply the offset by 4, and save in $t3
+		add $t3, $t4, $t3 		# $t3 = &A[i]
+
+		addi $s3, $0, 1 		# save 1 in register for beq instruction
+		beq $s2, $s3, EXIT 		# if i < 0, exit for loop
+		addi $0, $0, 0			# meaningless instruction for latency
+		beq $t6, $s3, CASE1		# if cnt_type = 1, run case1
+		addi $0, $0, 0			# meaningless instruction for latency
+	 
+		addi $s3, $0, -1  		# save -1 in register for beq instruction
+		beq $t6, $s3, CASE2		# if cnt_type = -1, run case2
+		addi $0, $0, 0			# meaningless instruction for latency
+
+		j Other   				# otherwise, run other
+		addi $0, $0, 0			# meaningless instruction for latency 
+
+CASE1: 	lw $a0, 0($t3)			# $a0 = A[i]
+		jal Pos 				# run the Pos function
+		addi $0, $0, 0			# meaningless instruction for latency 
+		add $s1, $s1, $v0		# cnt = cnt + v0
+		j FOR					# back to the start of the for loop
+		addi $0, $0, 0			# meaningless instruction for latency 
+CASE2: 	lw $a0, 0($t3) 			# $a0 = A[i]
+		jal Neg					# run the Neg function	
+		addi $0, $0, 0			# meaningless instruction for latency 
+		add $s1, $s1, $v0 		# cnt = cnt + v0
+		j FOR					# back to the start of the for loop
+		addi $0, $0, 0			# meaningless instruction for latency 
+Other: 	lw $a0, 0($t3) 			# $a0 = A[i]
+		jal Zero				# run the Zero function
+		addi $0, $0, 0			# meaningless instruction for latency 
+		add $s1, $s1, $v0 		# cnt = cnt + v0
+		j FOR					# back to the start of the for loop
+		addi $0, $0, 0			# meaningless instruction for latency 
+
+EXIT:	lw $ra, 0($sp) 			# restore return address $ra from stack
+		addi $sp, $sp ,4		# release stack
+		addi $v0, $s1, 0 		# result = cnt;
+		jr $ra					# return to main
+		addi $0, $0, 0			# meaningless instruction for latency 
+
+Pos:	slt $v0, $0, $a0 		# if 0 < $a0 , result = 1 ,else result = 0
+		jr $ra  				#return to countArray
+		addi $0, $0, 0			#meaningless instruction for latency
+Neg:	slt $v0, $a0, $0 		# if 0 > $a0 , result = 1 ,else result = 0
+		jr $ra					#return to countArray
+		addi $0, $0, 0			#meaningless instruction for latency
+Zero:	beq $a0, $0, L1			# if $a0 = 0 , jump to L1
+		addi $0, $0, 0			#meaningless instruction for latency 
+		addi $v0, $0, 0			#if so ,result $v0 is 0
+		jr $ra					#return to countArray
+		addi $0, $0, 0			#meaningless instruction for latency 
+L1:		addi $v0, $0, 1			# else, result $v0 is 1
+		jr $ra					# return to countArray
+		addi $0, $0, 0			# meaningless instruction for latency 
+	
+	
