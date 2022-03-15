@@ -1,0 +1,16 @@
+e1:Use pointers to convert a array containing six arrays which contain 2 elements.Then use the rule of calculation to convert cartesion to polar.
+Then, return the pointer of the new array and print its containing.
+e2:Use pointer to read the array,and find the maximum by replacing the smaller one by the larger one.Then, use the maximum as the upper bounde
+to rand a new number r. Then, use pointer to read through the array to find numbers less than r.
+e3:Use fgetsf to get the sentence and fscanf to get the word.Then, use pointer to read through the sentence.If the words in the sentence is
+equal to the word,then n=n+1.The n is the result.
+e4:First,use fgets to get the first line as a string.Then,calculate the times that backspace occurs.The method is the same as e3.Then we can
+know how large is the matric.Then use malloc to get to two-dimensional arrays.Use fscanf to store the number and then use the rule of matric
+to get three output.
+e5:
+e7:A linked list is a list of structure which contains data and a pointer point to the next structure.It can be used to handle the merge operation
+of the linear table.
+In e7,we set the first list by set a new structure and point the pointer to the second one.Set the last by set a new structure and point the 
+pointer of the last second one to it.Delete first by free the memory and point the head to the second one and delete last by free the last and
+point the last second to NULL.Split by point the end of the fist list to NULL and set a new head for the beginning of the second list.Merge by
+point the end of the first to the head of the second.
